@@ -1,4 +1,4 @@
-import { Pressable, StyleSheet, Text, View } from "react-native";
+import { Alert, Pressable, StyleSheet, Text, View } from "react-native";
 import React from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
 import ResetType from "@/components/ResetType";
@@ -71,7 +71,10 @@ const forgotpassword = () => {
               />
             ))}
           </View>
-          <Pressable style={styles.button}>
+          <Pressable
+            style={styles.button}
+            onPress={() => Alert.alert("Reset Password")}
+          >
             <Text style={styles.buttonText}>Reset Password</Text>
             <FontAwesome name="long-arrow-right" color="white" size={24} />
           </Pressable>

@@ -1,5 +1,5 @@
 import React from "react";
-import { Text, View, Image, TextInput, Pressable } from "react-native";
+import { Text, View, Image, TextInput, Pressable, Alert } from "react-native";
 import FontAwesome from "@expo/vector-icons/FontAwesome";
 import { styles } from "./style";
 import { useRouter } from "expo-router";
@@ -62,7 +62,7 @@ export default function Signin() {
             </Pressable>
           </View>
         </View>
-        <Pressable style={styles.button}>
+        <Pressable style={styles.button} onPress={() => Alert.alert("Sign In")}>
           <Text style={styles.buttonText}>Sign In</Text>
           <FontAwesome name="long-arrow-right" color="white" size={24} />
         </Pressable>
@@ -75,18 +75,21 @@ export default function Signin() {
             color="#000"
             size={24}
             style={styles.socialLoginIcon}
+            onPress={() => Alert.alert("Facebook Login")}
           />
           <FontAwesome
             name="google"
             color="#000"
             size={24}
             style={styles.socialLoginIcon}
+            onPress={() => Alert.alert("Google Login")}
           />
           <FontAwesome
             name="instagram"
             color="#000"
             size={24}
             style={styles.socialLoginIcon}
+            onPress={() => Alert.alert("Instagram Login")}
           />
         </View>
 
